@@ -1,0 +1,61 @@
+Testcase_001:
+    description: "Login to google using valid email and password with sign in unchecked"
+    url: http://google.co.in/ 
+    email: k066016@gmail.com
+    password: 610660kcr
+    signincheck: false
+    expected_result: Login success
+    
+Testcase_002:
+    description: Login to google using valid email and password with sign in checked
+    url: http://google.co.in/ 
+    email: k066016@gmail.com
+    password: 610660kcr
+    signincheck: true
+    expected_result: Login success
+
+Testcase_003:
+    description: Login to google using valid email and invalid password
+    url: http://google.co.in/ 
+    email: k066016@gmail.com
+    password: 61066kcr
+    expected_result: The email and password you entered don't match.
+    
+Testcase_004:
+    description: Login to google using invalid email
+    url: http://google.co.in/ 
+    email: k06601@gmail.com
+    expected_result: Sorry, Google doesn't recognize that email.
+    
+Testcase_005:
+    description: Login to goolge using valid username in caps
+    url: http://google.co.in/ 
+    email: K066016@GMAIL.COM
+    expected_result: Email is accepted
+    
+Testcase_006:
+    description: Login to google using valid email and empty password
+    url: http://google.co.in/ 
+    email: k066016@gmail.com
+    password: 
+    expected_result: Please enter your password.
+    
+Testcase_007:
+    description: Login to google using valid email and password more than 200 characters
+    url: http://google.co.in/ 
+    email: k066016@gmail.com
+    password: aaasdfghjklopiuyfghjklmnbvcxzasdfghjkliuytrewqsdfghjkmnbvcxzsdfghjkliuytrewqasdfghjklmnbvcxzsdfghjkliopinhjkliuyhjkliuytgfdsawertyuioplkjhgfdsacvbnmjkliuytrefghjkliuytrfghnjmksdghfbnvhfgdhndfghjkirghfyfgghhh
+    expected_result: Must have at most 200 characters
+    
+Testcase_008:
+    description: Login to google using empty email
+    url: http://google.co.in/ 
+    email: 
+    expected_result: Please enter your email.
+    
+Testcase_009:
+    description: Login to google using a big email
+    url: http://google.co.in/ 
+    email: aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa@gmail.com
+    expected_result: This email address is too long.    
+    
