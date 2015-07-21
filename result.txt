@@ -1,0 +1,51 @@
+Testcase_001:
+{"description"=>"Login to google using valid email and password with sign in unchecked", "url"=>"http://google.co.in/", "email"=>"k066016@gmail.com", "password"=>"610660kcr", "signincheck"=>false, "expected_result"=>"Login success"}
+Actual result: Login success
+Testcase Pass
+
+Testcase_001:
+{"description"=>"Login to google using valid email and password with sign in unchecked", "url"=>"http://google.co.in/", "email"=>"k066016@gmail.com", "password"=>"610660kcr", "signincheck"=>false, "expected_result"=>"Login success"}
+Actual result: Login success
+Testcase Pass
+
+Testcase_002:
+{"description"=>"Login to google using valid email and password with sign in checked", "url"=>"http://google.co.in/", "email"=>"k066016@gmail.com", "password"=>"610660kcr", "signincheck"=>true, "expected_result"=>"Login success"}
+Actual result: Login success
+Testcase Pass
+
+Testcase_003:
+{"description"=>"Login to google using valid email and invalid password", "url"=>"http://google.co.in/", "email"=>"k066016@gmail.com", "password"=>"61066kcr", "expected_result"=>"The email and password you entered don't match."}
+Actual result: The email and password you entered don't match.
+Testcase Pass
+
+Testcase_004:
+{"description"=>"Login to google using invalid email", "url"=>"http://google.co.in/", "email"=>"k06601@gmail.com", "expected_result"=>"Sorry, Google doesn't recognize that email."}
+Actual result: Sorry, Google doesn't recognize that email.
+Testcase Pass
+
+Testcase_005:
+{"description"=>"Login to goolge using valid username in caps", "url"=>"http://google.co.in/", "email"=>"K066016@GMAIL.COM", "expected_result"=>"Email is accepted"}
+Actual result: Email is accepted
+Testcase Pass
+
+Testcase_006:
+{"description"=>"Login to google using valid email and empty password", "url"=>"http://google.co.in/", "email"=>"k066016@gmail.com", "password"=>nil, "expected_result"=>"Please enter your password."}
+Actual result: Please enter your password.
+Testcase Pass
+
+Testcase_007:
+{"description"=>"Login to google using valid email and password more than 200 characters", "url"=>"http://google.co.in/", "email"=>"k066016@gmail.com", "password"=>"aaasdfghjklopiuyfghjklmnbvcxzasdfghjkliuytrewqsdfghjkmnbvcxzsdfghjkliuytrewqasdfghjklmnbvcxzsdfghjkliopinhjkliuyhjkliuytgfdsawertyuioplkjhgfdsacvbnmjkliuytrefghjkliuytrfghnjmksdghfbnvhfgdhndfghjkirghfyfgghhh", "expected_result"=>"Must have at most 200 characters"}
+Actual result: Must have at most 200 characters
+Testcase Pass
+
+Testcase_008:
+{"description"=>"Login to google using empty email", "url"=>"http://google.co.in/", "email"=>nil, "expected_result"=>"Please enter your email."}
+Actual result: Please enter your email.
+Testcase Pass
+
+Testcase_009:
+{"description"=>"Login to google using a big email", "url"=>"http://google.co.in/", "email"=>"aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa@gmail.com", "expected_result"=>"This email address is too long."}
+Actual result: This email address is too long.
+Testcase Pass
+
+All zip files containing screenshots saved to /home/krishna/Automate-Google-SignIn/temp/
