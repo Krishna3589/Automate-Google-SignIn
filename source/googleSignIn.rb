@@ -115,7 +115,7 @@ for i in 1..9
         puts "Actual result: Login success"
         "Login success" === "#{testData['expected_result']}" ? (puts "Testcase Pass\n\n") : (puts "Testcase Fail\n\n")
         #If the user is signed in then sign out
-        test.browser_operation('link', 'class', 'gb_pa gb_l gb_r gb_h')
+        test.browser_operation('link', 'class', 'gb_ca gb_l gb_r gb_h')
         test.browser_operation('link', 'id', 'gb_71')
         Watir::Wait.until { $browser.link(:id => "gb_70").exist? }  #To make sure the user is signed out
         test.zipfiles
